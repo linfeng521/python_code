@@ -1,0 +1,17 @@
+控件操作:
+    click
+    set_text
+    app_start()
+    app_stop()
+session
+    1.启动应用
+    sess = d.session（“ com.netease.cloudmusic ”）
+    2.访问一个运行的应用
+    sess = d.session（“ com.netease.cloudmusic ”，attach = True）
+    3.检测会话是否连接
+    sess.running() /True|false
+
+d(text="Settings").wait.exists(timeout=3000)
+
+# 点击直到元素不见了，返回布尔
+is_gone = d(text="Skip").click_gone(maxretry=10, interval=1.0) # maxretry default
